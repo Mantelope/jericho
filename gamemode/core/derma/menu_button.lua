@@ -29,11 +29,9 @@ function menu_button:Init()
     self:SetMouseInputEnabled(true);
 end
 
-function menu_button:SetSize(w, h)
-    jericho.print(self.width)
-    --[[self.w = w;
-    self.h = h;
-    self.button:SetSize(w - 2 * self.padding, h - 2 * self.padding);]]
+function menu_button:set_size(w, h)
+    self:setSize(w, h)
+    self.button:SetSize(w - 2 * self.padding, h - 2 * self.padding);
 end
 
 function menu_button:Paint(w, h)
