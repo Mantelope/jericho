@@ -1,6 +1,6 @@
 
 local menu = {
-    bg_color = Color(253, 249, 248, 255),               -- \brief Main menu background color.
+    bg_color = Color(253, 249, 248),               -- \brief Main menu background color.
 
     bg_gradient     = Material('vgui/gradient_down'),   -- \brief Main menu gradient.
     bg_grad_color   = Color(240, 237, 232),             -- \breif Main menu gradient color.
