@@ -17,7 +17,7 @@ function menu:Init()
     self:SetMouseInputEnabled(true)
 
     self.load_button = vgui.Create("menu_button", self, "load_button");
-    self.load_button:set_size(ScrW() * 0.4, ScrW() * 0.4);
+    self.load_button:set_size(ScrW() * 0.3, ScrW() * 0.3);
     self.load_button:SetPos(64, ScrH() * 0.3);
     self.load_button:SetZPos(5)
 end

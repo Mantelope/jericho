@@ -14,7 +14,7 @@ end
 
 function button_internal:Paint(w, h)
     --- \brief Draw button shadow.
-    draw.RoundedBox(radius, self.shadow_offset, self.shadow_offset, w, h, self.shadow_color);
+    --draw.RoundedBox(radius, self.shadow_offset, self.shadow_offset, w, h, self.shadow_color);
 end
 
 vgui.Register("button_internal", button_internal, "DButton");
