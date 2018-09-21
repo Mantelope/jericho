@@ -2,7 +2,7 @@
 local menu_button = {
     radius = 5,                                     --- \brief
 
-    padding = 2,                                    --- \brief Outline width
+    padding = 5,                                    --- \brief Outline width
 
     bg_color            = Color(0, 0, 0),           --- \brief Background color.
     bg_border_color     = Color(242, 196, 49),      --- \brief The border color
