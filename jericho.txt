@@ -1,0 +1,5 @@
+"jericho" {
+	"base"		"sandbox"
+	"title"		"Jericho Engine"
+	"author"	"Jeacho"
+}
