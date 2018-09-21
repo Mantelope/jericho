@@ -19,6 +19,8 @@ function menu_button:Paint(w, h)
 
     draw.RoundedBox(self.radius, self.padding * 2, self.padding * 2, bw, bh, self.shadow_color);
 
+    print(self:IsHovered())
+
     if self:IsHovered() then
         draw.RoundedBox(self.radius, 0, 0, w, h, self.border_color);
     end
