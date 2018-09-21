@@ -21,7 +21,7 @@ function menu_button:Paint(w, h)
 
     print(self:IsHovered())
 
-    if self:IsHovered() then
+    if gui.GetHoveredPanel() == self then
         draw.RoundedBox(self.radius, 0, 0, w, h, self.border_color);
     end
 
