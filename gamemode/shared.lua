@@ -1,2 +1,2 @@
 
-jericho.include_directory("core/derma", jericho.client)
+jericho.include("core/derma/main_menu.lua", jericho.client)

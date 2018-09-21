@@ -1,4 +1,6 @@
 
+DeriveGamemode("sandbox")
+
 jericho = jericho or {
     --- \brief Setting this to true will mean that there will be debug output
     --- in the server log.
