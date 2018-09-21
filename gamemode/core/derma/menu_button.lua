@@ -13,7 +13,7 @@ function menu_button:Init()
 end
 
 function menu_button:Paint(w, h)
-    draw.RoundedBox(self.radius, 0, 0, w, h, self.bg_color, self.bg_border_color);
+    draw.RoundedBox(self.radius, 0, 0, w, h, self.bg_border_color);
     draw.RoundedBox(self.radius, self.padding, self.padding, w - 2 * self.padding, h - 2 * self.padding, self.bg_color);
 end
 
