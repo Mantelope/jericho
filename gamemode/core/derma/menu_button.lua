@@ -30,9 +30,10 @@ function menu_button:Init()
 end
 
 function menu_button:SetSize(w, h)
-    self.w = w;
+    jericho.print(self.w)
+    --[[self.w = w;
     self.h = h;
-    self.button:SetSize(w - 2 * self.padding, h - 2 * self.padding);
+    self.button:SetSize(w - 2 * self.padding, h - 2 * self.padding);]]
 end
 
 function menu_button:Paint(w, h)
