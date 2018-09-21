@@ -12,10 +12,12 @@ function menu:Init()
     self:MakePopup();
     self:Center();
     self:ParentToHUD();
+    self:SetZPos(0)
 
     self.load_button = vgui.Create("menu_button");
     self.load_button:SetSize(ScrW() * 0.3, ScrH() * 0.3);
     self.load_button:SetPos(64, ScrW() * 0.5);
+    self.load_button:SetZPos(5)
 end
 
 function menu:Paint(w, h)
