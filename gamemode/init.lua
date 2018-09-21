@@ -13,8 +13,6 @@ include("core/log.lua")             --- NOTE: VITIAL!
 include("core/include.lua")         --- NOTE: VITIAL!
 include("shared.lua")
 
-jericho.include("core/derma/menu.lua",          jericho.shared)
-
 function GM:PlayerInitialSpawn(client)
     --- \brief Lock the players model for the main menu screen.
     client:SetNoDraw(true);
