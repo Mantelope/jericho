@@ -22,4 +22,4 @@ function menu_button:Paint(w, h)
     draw.RoundedBox(self.radius, 0, 0, w, h, self.bg_color);
 end
 
-vgui.Register("menu_button", menu, "EditablePanel");
+vgui.Register("menu_button", menu_button, "EditablePanel");
