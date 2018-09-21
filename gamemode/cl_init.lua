@@ -5,3 +5,5 @@ kracken = kracken or {gui = {}}
 hook.Add("HUDShouldDraw", "HideHUD", function(key)
 	return false;
 end)
+
+AddCSLuaFile("core/client/derma/main_menu.lua")
