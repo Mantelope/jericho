@@ -14,6 +14,8 @@ function menu:Init()
     self:ParentToHUD();
     self:SetZPos(0)
 
+    self:SetMouseInputEnabled(true)
+
     self.load_button = vgui.Create("menu_button");
     self.load_button:SetSize(ScrW() * 0.3, ScrH() * 0.3);
     self.load_button:SetPos(64, ScrH() * 0.5);
