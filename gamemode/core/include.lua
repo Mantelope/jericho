@@ -23,6 +23,7 @@ function jericho.include_directory(dir)
     assert(dir, "[ JERICHO ] jericho.include_directory(filename): filename cannot be nil.");
 
 	for k, v in ipairs(file.Find("jericho/gamemode/" .. dir .. "/*.lua", "LUA")) do
+        jericho.print("including \'" .. dir .. "/" .. v .. "\'")
 		nut.util.include(dir.."/"..v);
 	end
 end
