@@ -1,7 +1,9 @@
 
-kracken = kracken or {gui = {}}
+jericho = jericho or {gui = {}}
 
-include("core/derma/main_menu.lua")
+--- NOTE: VITIAL!
+include("core/include.lua")
+include("shared.lua")
 
 -- \brief Clear default garry's mod HUD.
 hook.Add("HUDShouldDraw", "HideHUD", function(key)

@@ -1,2 +1,2 @@
 
-AddCSLuaFile("core/derma/main_menu.lua")
+jericho.link_directory("core/derma")

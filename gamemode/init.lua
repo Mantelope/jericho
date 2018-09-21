@@ -1,10 +1,14 @@
 
 DeriveGamemode("sandbox")
 
-AddCSLuaFile("shared.lua")
+--- \brief Files to send to player.
 AddCSLuaFile("cl_init.lua")
-
+--- NOTE: VITIAL!
+AddCSLuaFile("core/include.lua")
 AddCSLuaFile("shared.lua")
+
+--- \brief Files to include.
+include("shared.lua")
 
 function GM:PlayerInitialSpawn(client)
     --- \brief Lock the players model for the main menu screen.
