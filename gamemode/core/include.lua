@@ -9,17 +9,22 @@ function jericho.include(path, state)
 	jericho.assert(path, "jericho.include(path): path cannot be nil.");
 
 	if state == jericho.server then
-        include(path)
+        jericho.print("including file \'" .. path .. "\' to server.");
+        include(path);
     elseif state == jericho.shared then
         if SERVER then
+            jericho.print("sending file  \'" .. path .. "\' to client.");
 			AddCSLuaFile(path)
 		end
 
+        jericho.print("including file \'" .. path .. "\' to server.");
 		include(path)
     elseif state == jericho.client then
         if SERVER then
+            jericho.print("sending file  \'" .. path .. "\' to client.");
 			AddCSLuaFile(path)
 		else
+            jericho.print("including file \'" .. path .. "\' to server.");
 			include(path)
 		end
     else
@@ -36,9 +41,9 @@ end
 --- NOTE: This function will include all files in the directory given.
 function jericho.include_directory(dir, state)
     jericho.assert(dir, "jericho.include_directory(filename): directory cannot be nil.");
+    jericho.print("including directory \'" .. dir .. "\'...");
 
 	for k, v in ipairs(file.Find("jericho/gamemode/" .. dir .. "/*.lua", "LUA")) do
-        jericho.print("including \'" .. dir .. "/" .. v .. "\'");
 		jericho.include(dir .. "/" .. v, state);
 	end
 end
