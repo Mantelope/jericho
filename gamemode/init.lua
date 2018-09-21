@@ -4,10 +4,12 @@ DeriveGamemode("sandbox")
 --- \brief Files to send to player.
 AddCSLuaFile("cl_init.lua")
 --- NOTE: VITIAL!
+ddCSLuaFile("core/log.lua")
 AddCSLuaFile("core/include.lua")
 AddCSLuaFile("shared.lua")
 
 --- \brief Files to include.
+include("core/log.lua")
 include("core/include.lua")
 include("shared.lua")
 
