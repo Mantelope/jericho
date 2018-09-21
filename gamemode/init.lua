@@ -8,6 +8,7 @@ AddCSLuaFile("core/include.lua")
 AddCSLuaFile("shared.lua")
 
 --- \brief Files to include.
+include("core/include.lua")
 include("shared.lua")
 
 function GM:PlayerInitialSpawn(client)
