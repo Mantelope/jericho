@@ -1,8 +1,8 @@
 
 local menu_button = {
-    radius = 5,                                     --- \brief
+    radius = 5,                                 --- \brief
 
-    padding = 4,                                    --- \brief Outline width
+    padding = 4,                                --- \brief Outline width
 
     bg_color        = Color(0, 0, 0),           --- \brief The background color.
     shadow_color    = Color(236, 236, 236),     --- \brief The shadow color.
