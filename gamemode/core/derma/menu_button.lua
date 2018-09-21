@@ -36,7 +36,7 @@ function menu_button:set_size(w, h)
 end
 
 function menu_button:Paint(w, h)
-    if self:IsHovered() then
+    if self.button:IsHovered() then
         draw.RoundedBox(radius, 0, 0, w, h, self.border_color);
     end
 end
