@@ -4,7 +4,7 @@
 --- \p path The path to the file to include.
 --- NOTE: This function can only be called in shared.lua
 function jericho.include(path)
-	assert(path, "[ JERICHO ] jericho.include(filename): filename cannot be nil.");
+	assert(path, "[ JERICHO ] jericho.include(path): path cannot be nil.");
 
 	if SERVER then
 		include(path);
