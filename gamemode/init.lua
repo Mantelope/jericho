@@ -13,6 +13,7 @@ include("core/log.lua")             --- NOTE: VITIAL!
 include("core/include.lua")         --- NOTE: VITIAL!
 include("shared.lua")
 
+AddCSLuaFile("core/derma/menu_button.lua")
 AddCSLuaFile("core/derma/menu.lua")
 
 function GM:PlayerInitialSpawn(client)
