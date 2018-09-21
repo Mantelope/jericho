@@ -29,6 +29,12 @@ function menu_button:Init()
     self:SetMouseInputEnabled(true);
 end
 
+function menu_button:SetSize(w, h)
+    self.w = w;
+    self.h = h;
+    self.button:SetSize(w - 2 * padding, h - 2 * padding);
+end
+
 function menu_button:Paint(w, h)
     if self:IsHovered() then
         draw.RoundedBox(radius, 0, 0, w, h, self.border_color);
