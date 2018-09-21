@@ -1,2 +1,2 @@
 
-jericho.link_directory("core/derma")
+jericho.include_directory("core/derma")
