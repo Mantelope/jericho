@@ -30,7 +30,7 @@ function menu_button:Init()
 end
 
 function menu_button:set_size(w, h)
-    self:setSize(w, h)
+    self:SetSize(w, h)
     self.button:SetSize(w - 2 * self.padding, h - 2 * self.padding);
 end
 
