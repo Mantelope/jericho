@@ -1,31 +1,36 @@
 
-local menu_button = {
-    radius = 5,                                 --- \brief
-
-    padding = 4,                                --- \brief Outline width
-
+local button_internal = {
     bg_color        = Color(0, 0, 0),           --- \brief The background color.
     shadow_color    = Color(236, 236, 236),     --- \brief The shadow color.
-    border_color    = Color(242, 196, 49),      --- \brief The border color
+    shadow_offset   = 2,
+};
+
+function button_internal:Init()
+    self:SetMouseInputEnabled(true);
+end
+
+function button_internal:Paint(w, h)
+    --- \brief Draw button shadow.
+    draw.RoundedBox(self.radius, self.shadow_offset, self.shadow_offset, w, h, self.shadow_color);
+end
+
+vgui.Register("button_internal", button_internal, "DButton");
+
+local menu_button = {
+    border_color    = Color(242, 196, 49),      --- \brief The border color.
+    radius          = 5,                        --- \brief Button border radius.
+    padding         = 3,                        --- \brief Outline width.
 };
 
 function menu_button:Init()
-    self:SetMouseInputEnabled(true)
+    self.button = vgui.Create("button_internal", self);
+    self:SetMouseInputEnabled(true);
 end
 
 function menu_button:Paint(w, h)
-    local bw = w - 2 * self.padding;
-    local bh = h - 2 * self.padding;
-
-    draw.RoundedBox(self.radius, self.padding * 2, self.padding * 2, bw, bh, self.shadow_color);
-
-    print(self:IsHovered())
-
-    if vgui.GetHoveredPanel() == self then
+    if self:IsHovered() then
         draw.RoundedBox(self.radius, 0, 0, w, h, self.border_color);
     end
-
-    draw.RoundedBox(self.radius, self.padding, self.padding, bw, bh, self.bg_color);
 end
 
-vgui.Register("menu_button", menu_button, "EditablePanel");
+vgui.Register("menu_button", menu_button, "DPanel");
