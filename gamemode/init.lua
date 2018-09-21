@@ -6,13 +6,14 @@ AddCSLuaFile("cl_init.lua")
 
 AddCSLuaFile("core/log.lua")        --- NOTE: VITIAL!
 AddCSLuaFile("core/include.lua")    --- NOTE: VITIAL!
-AddCSLuaFile("core/derma/menu.lua")    --- NOTE: VITIAL!
 AddCSLuaFile("shared.lua")
 
 --- \brief Files to include.
 include("core/log.lua")             --- NOTE: VITIAL!
 include("core/include.lua")         --- NOTE: VITIAL!
 include("shared.lua")
+
+jericho.include("core/derma/menu.lua",          jericho.shared)
 
 function GM:PlayerInitialSpawn(client)
     --- \brief Lock the players model for the main menu screen.
