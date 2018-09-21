@@ -11,16 +11,16 @@ local settings = {
 function jericho.print(message)
     if jericho.debug then
         MsgC(settings.tag_color, settings.tag);
-        print(header .. message);
+        print(message);
     end
 end
 
 --- \brief Assertion override with jericho tag.
 function jericho.assert(predicate, message)
-    assert(predicate, header .. message or "");
+    assert(predicate, settings.tag .. message or "");
 end
 
 --- \brief Error with jericho tag.
 function jericho.error(message)
-    error(header .. message);
+    error(settings.tag .. message);
 end
