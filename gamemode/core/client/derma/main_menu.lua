@@ -25,3 +25,5 @@ end
 
 vgui.Register("kracken_main_menu", menu, "EditablePanel")
 vgui.Create("kracken_main_menu")
+
+print("kraken: main menu initialized.")

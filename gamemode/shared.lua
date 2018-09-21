@@ -1,2 +1,2 @@
 
-include("core/client/derma/main_menu.lua")
+AddCSLuaFile("core/client/derma/main_menu.lua")
