@@ -4,8 +4,10 @@ DeriveGamemode("sandbox")
 --- \brief Files to send to player.
 AddCSLuaFile("cl_init.lua")
 
-AddCSLuaFile("core/log.lua")        --- NOTE: VITIAL!
-AddCSLuaFile("core/include.lua")    --- NOTE: VITIAL!
+AddCSLuaFile("core/log.lua")                        --- NOTE: VITIAL!
+AddCSLuaFile("core/include.lua")                    --- NOTE: VITIAL!
+AddCSLuaFile("core/derma/menu_button.lua")
+AddCSLuaFile("core/derma/menu.lua")
 AddCSLuaFile("shared.lua")
 
 --- \brief Files to include.
@@ -13,8 +15,7 @@ include("core/log.lua")             --- NOTE: VITIAL!
 include("core/include.lua")         --- NOTE: VITIAL!
 include("shared.lua")
 
-AddCSLuaFile("core/derma/menu_button.lua")
-AddCSLuaFile("core/derma/menu.lua")
+
 
 function GM:PlayerInitialSpawn(client)
     --- \brief Lock the players model for the main menu screen.
