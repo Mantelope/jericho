@@ -10,7 +10,7 @@ local menu_button = {
 };
 
 function menu_button:Init()
-
+    self:SetMouseInputEnabled(true)
 end
 
 function menu_button:Paint(w, h)
