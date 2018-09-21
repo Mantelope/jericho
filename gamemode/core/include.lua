@@ -12,7 +12,7 @@ function jericho.include(path, state)
         jericho.print("including file \'" .. path .. "\' to server.");
         include(path);
     elseif state == jericho.shared then
-        jericho.print("include file  \'" .. path .. "\' to shared.");
+        jericho.print("including file \'" .. path .. "\' to shared.");
 
         if SERVER then
 			AddCSLuaFile(path)
@@ -20,7 +20,7 @@ function jericho.include(path, state)
 
 		include(path)
     elseif state == jericho.client then
-        ericho.print("including file  \'" .. path .. "\' to client.");
+        jericho.print("including file \'" .. path .. "\' to client.");
 
         if SERVER then
 			AddCSLuaFile(path)

@@ -6,6 +6,7 @@ AddCSLuaFile("cl_init.lua")
 
 AddCSLuaFile("core/log.lua")        --- NOTE: VITIAL!
 AddCSLuaFile("core/include.lua")    --- NOTE: VITIAL!
+AddCSLuaFile("core/derma/menu.lua")
 AddCSLuaFile("shared.lua")
 
 --- \brief Files to include.
