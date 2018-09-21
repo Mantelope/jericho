@@ -4,6 +4,11 @@ jericho = jericho or {
     --- in the server log.
     debug = true,
 
+    --- \brief Bitflags for core/include.lua
+    client = 0x0,
+    shared = 0x1,
+    server = 0x2,
+
     gui = {},
 };
 
