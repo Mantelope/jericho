@@ -1,0 +1,5 @@
+"kracken" {
+	"base"		"sandbox"
+	"title"		"Kracken Engine"
+	"author"	"Jeacho"
+}
