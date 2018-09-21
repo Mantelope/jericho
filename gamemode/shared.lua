@@ -1,2 +1,2 @@
 
-jericho.include("core/derma/menu.lua", jericho.shared)
+jericho.include("core/derma/menu/menu.lua", jericho.shared)
