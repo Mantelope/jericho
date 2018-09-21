@@ -16,10 +16,11 @@ function menu_button:Paint(w, h)
     --- \brief Draw the out line of the box when the mouse is hovering over this
     --- button.
     if self:IsHovered() then
+        jericho.print("button hovered!")
         draw.RoundedBox(self.radius, padding, padding, w - 2 * padding, - 2 * padding, self.bg_color);
     end
 
-    draw.RoundedBox(self.radius, 0, 0, w, h, self.bg_color);
+    --draw.RoundedBox(self.radius, 0, 0, w, h, self.bg_color);
 end
 
 vgui.Register("menu_button", menu_button, "EditablePanel");
