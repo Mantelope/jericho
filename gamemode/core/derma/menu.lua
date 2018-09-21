@@ -27,8 +27,6 @@ function menu:Paint(w, h)
     surface.SetMaterial(self.bg_gradient);
     surface.SetDrawColor(self.bg_grad_color);
     surface.DrawTexturedRect(0, 0, w, h/3);
-
-    self.load_button:Paint(w, h);
 end
 
 vgui.Register("menu", menu, "EditablePanel");
