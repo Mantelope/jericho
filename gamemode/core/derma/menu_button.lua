@@ -10,6 +10,7 @@ local button_internal = {
 
 function button_internal:Init()
     self:SetMouseInputEnabled(true);
+    self:SetImage("icon16/bomb.png");
 end
 
 function button_internal:Paint(w, h)
@@ -17,11 +18,11 @@ function button_internal:Paint(w, h)
     draw.RoundedBox(radius, self.shadow_offset, self.shadow_offset, w, h, self.shadow_color);
 end
 
-vgui.Register("button_internal", button_internal, "DButton");
+vgui.Register("button_internal", button_internal, "DImageButton");
 
 local menu_button = {
     border_color    = Color(242, 196, 49),      --- \brief The border color.
-    padding         = 3,                        --- \brief Outline width.
+    padding         = 4,                        --- \brief Outline width.
 };
 
 function menu_button:Init()
