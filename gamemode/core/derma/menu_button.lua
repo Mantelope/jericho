@@ -15,7 +15,7 @@ local function DrawBlurRect(x, y, w, h)
         render.UpdateScreenEffectTexture()
 
         render.SetScissorRect(x, y, x+w, y+h, true)
-        surface.DrawTexturedRect(x, y, scrW, scrH)
+        surface.DrawTexturedRect(x, y, w, h)
         render.SetScissorRect(0, 0, 0, 0, false)
     end
 
