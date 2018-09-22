@@ -20,7 +20,7 @@ function button_internal:Paint(w, h)
     --- \brief Draw button shadow.
     draw.RoundedBox(radius, self.shadow_offset, self.shadow_offset, w, h, self.shadow_color);
 
-    if self.button:IsHovered() then
+    if self:IsHovered() then
         surface.SetDrawColor(255, 255, 255)
         surface.SetMaterial(blur)
         for i = 1, 3 do
