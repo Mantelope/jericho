@@ -46,6 +46,11 @@ function button_internal:Paint(w, h)
     surface.SetDrawColor(255, 255, 255, 255)
 	surface.SetMaterial(ourMat)
 	surface.DrawTexturedRect( 0, 0, 512, 512 )
+
+    if self:IsHovered() then
+        local x, y = self:GetPos()
+        DrawBlurRect(x, y, w, h)
+    end
 end
 
 vgui.Register("button_internal", button_internal, "DImageButton");
