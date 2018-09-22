@@ -2,6 +2,28 @@
 --- \brief Blur material
 local blur = Material("pp/blurscreen")
 
+local function DrawBlurRect(x, y, w, h)
+    local X, Y = 0,0
+
+    surface.SetDrawColor(255,255,255)
+    surface.SetMaterial(blur)
+
+    for i = 1, 5 do
+        blur:SetFloat("$blur", (i / 3) * (5))
+        blur:Recompute()
+
+        render.UpdateScreenEffectTexture()
+
+        render.SetScissorRect(x, y, x+w, y+h, true)
+            surface.DrawTexturedRect(X * -1, Y * -1, scrW, scrH)
+        render.SetScissorRect(0, 0, 0, 0, false)
+    end
+
+   draw.RoundedBox(0,x,y,w,h,Color(0,0,0,205))
+   surface.SetDrawColor(0,0,0)
+   surface.DrawOutlinedRect(x,y,w,h)
+end
+
 --- \brief Button border radius.
 local radius = 5;
 
@@ -19,9 +41,9 @@ end
 function button_internal:Paint(w, h)
     --- \brief Draw button shadow.
     draw.RoundedBox(radius, self.shadow_offset, self.shadow_offset, w, h, self.shadow_color);
-    
+
     if self:IsHovered() then
-        Derma_DrawBackgroundBlur( self, self.startTime )
+        DrawBlurRect(self:GetX(), self:GetY(), w, h)
     end
 end
 
