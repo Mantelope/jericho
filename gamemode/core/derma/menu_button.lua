@@ -2,6 +2,9 @@
 --- \brief Blur material
 local blur = Material("pp/blurscreen")
 
+--- temp
+local ourMat = Material( "models/wireframe" )
+
 local function DrawBlurRect(x, y, w, h)
     local X, Y = 0,0
 
@@ -35,12 +38,14 @@ local button_internal = {
 
 function button_internal:Init()
     self:SetMouseInputEnabled(true);
-    self:SetImage("icon16/bomb.png");
 end
 
 function button_internal:Paint(w, h)
     --- \brief Draw button shadow.
     draw.RoundedBox(radius, self.shadow_offset, self.shadow_offset, w, h, self.shadow_color);
+    surface.SetDrawColor( 255, 255, 255, 255 )
+	surface.SetMaterial(ourMat) -- If you use Material, cache it!
+	surface.DrawTexturedRect( 0, 0, 512, 512 )
 
     if self:IsHovered() then
         local x, y = self:GetPos();
