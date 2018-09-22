@@ -43,7 +43,8 @@ function button_internal:Paint(w, h)
     draw.RoundedBox(radius, self.shadow_offset, self.shadow_offset, w, h, self.shadow_color);
 
     if self:IsHovered() then
-        DrawBlurRect(self:GetX(), self:GetY(), w, h)
+        local x, y = self:GetPos();
+        DrawBlurRect(x, y, w, h);
     end
 end
 
